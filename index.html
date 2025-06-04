@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Feliz Dia dos Namorados ❤️</h1>
+    <p class="intro">
+      Hoje é o nosso dia! Que possamos celebrar cada momento de amor, carinho e cumplicidade.  
+      Você é o meu presente mais bonito! 💕
+    </p>
+
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Foto do casal" />
+      <img src="photo2.jpg" alt="Foto do casal" />
+      <img src="photo3.jpg" alt="Foto do casal" />
+      <img src="photo4.jpg" alt="Foto do casal" />
+    </div>
+
+   <!-- Seção do link do vídeo -->
+    <section class="video">
+      <h2>💖</h2>
+      <p><a href="video.mp4" download target="_blank">Um vídeo especial</a></p>
+    </section>
+
+
+
+    <section class="countdown">
+      <h2>Contagem regressiva</h2>
+      <p>Faltam <span id="daysLeft">0</span> dias para o nosso próximo Dia dos Namorados! 🌹</p>
+    </section>
+
+    <button class="love-button">❤️ Te amo!</button>
+  </main>
+
+  <script>
+    const targetDate = new Date("2026-06-12");
+    const today = new Date();
+    const timeDiff = targetDate - today;
+    const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    document.getElementById("daysLeft").textContent = days;
+  </script>
+</body>
+</html>
